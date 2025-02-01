@@ -12,13 +12,32 @@ This project presents a Computational Fluid Dynamics (CFD) simulation of fluid f
 
 ## Repository Structure
 ```
-|-- case/
-|   |-- 0/                # Initial conditions
-|   |-- constant/         # Material properties & transport models
-|   |-- system/           # Solver settings & mesh configuration
-|-- meshes/               # blockMesh setup files
-|-- results/              # Post-processing data
-|-- scripts/              # Additional automation scripts
+|-- projectFiles/
+|   |-- bentPipe/
+|   |   |-- Re100/
+|   |   |   |-- q-500/
+|   |   |   |   |-- 0/
+|   |   |   |   |-- constant/
+|   |   |   |   |-- allrun
+|   |   |   |   |-- allclean
+|   |   |   |   |-- system/
+|   |   |   |   |-- results/
+|   |   |   |   |-- 100
+|   |   |   |   |-- 200
+|   |   |   |   |-- 300
+|   |   |   |   |-- 400
+|   |   |   |   |-- 500
+|   |   |   |   |-- 600
+|   |   |   |   |-- 700
+|   |   |   |   |-- 800
+|   |   |   |   |-- 900
+|   |   |   |   |-- 1000
+|   |   |   |-- q-1000/
+|   |   |   |-- q-1500/
+|   |   |-- Re5000/
+|   |   |-- Re20000/
+|   |-- straightPipe/
+|   |   |-- (Same structure as bentPipe)
 |-- README.md             # Project documentation
 ```
 
@@ -35,11 +54,11 @@ sudo apt update && sudo apt install openfoam
    git clone https://github.com/yourusername/repository-name.git
    cd repository-name
    ```
-2. Generate the mesh:
+2. Go to the specific Reynold's Number and go to the specific Heat Flux and Generate the mesh:
    ```bash
    blockMesh
    ```
-3. Set initial conditions and run the solver:
+3. Delete the already simulated values(100-1000) and Set initial conditions and run the solver:
    ```bash
    buoyantSimpleFoam
    ```
