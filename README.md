@@ -51,8 +51,9 @@ sudo apt update && sudo apt install openfoam
 ### Running the Simulation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/repository-name.git
-   cd repository-name
+   git clone https://github.com/imsujithrn/CFD-Simulation-of-a-180-Heated-Bent-Pipe-using-OpenFOAM.git
+   cd CFD-Simulation-of-a-180-Heated-Bent-Pipe-using-OpenFOAM
+
    ```
 2. Go to the specific Reynold's Number and go to the specific Heat Flux and Generate the mesh:
    ```bash
