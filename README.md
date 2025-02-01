@@ -41,7 +41,7 @@ sudo apt update && sudo apt install openfoam
    ```
 3. Set initial conditions and run the solver:
    ```bash
-   simpleFoam
+   buoyantSimpleFoam
    ```
 4. View results in ParaView:
    ```bash
