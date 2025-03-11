@@ -1,0 +1,25 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Exit on error
+set -e
+
+
+# Create a directory to store all results
+RESULT_DIR="results"
+mkdir -p $RESULT_DIR/logs
+
+echo "Starting simulation..."
+
+# 1. Generate the mesh and log the output
+echo "Running blockMesh..."
+blockMesh > $RESULT_DIR/logs/blockMesh.log
+
+# 2. Run the solver and log the output
+echo "Running buoyantSimpleFoam..."
+buoyantSimpleFoam > $RESULT_DIR/logs/buoyantSimpleFoam.log
+
+
